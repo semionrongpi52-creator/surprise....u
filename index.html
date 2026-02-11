@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Surprise!!</title>
+
+<style>
+
+/* Background */
+body{
+    margin:0;
+    background:black;
+    overflow:hidden;
+    font-family:Arial, sans-serif;
+}
+
+/* Netflix-style intro */
+.intro{
+    position:absolute;
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:black;
+    z-index:10;
+    animation:fadeOut 1.5s 4s forwards;
+}
+
+/* Big cinematic text */
+.intro h1{
+    color:#e50914; /* Netflix red */
+    font-size:90px;
+    letter-spacing:10px;
+    text-shadow:
+        0 0 10px #e50914,
+        0 0 40px #e50914,
+        0 0 80px #ff2a2a;
+    transform:scale(0.3);
+    animation:zoomReveal 4s ease forwards;
+}
+
+/* Zoom animation */
+@keyframes zoomReveal{
+    0%{
+        transform:scale(0.2);
+        opacity:0;
+    }
+    60%{
+        transform:scale(1.1);
+        opacity:1;
+    }
+    100%{
+        transform:scale(1);
+    }
+}
+
+/* Fade intro away */
+@keyframes fadeOut{
+    to{
+        opacity:0;
+        visibility:hidden;
+    }
+}
+
+/* Main page */
+.main{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    color:white;
+    opacity:0;
+    animation:showMain 2s 4.5s forwards;
+
+}
+
+@keyframes showMain{
+    to{opacity:1;}
+}
+
+/* Image */
+img{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid #e50914;
+    box-shadow:0 0 60px #e50914;
+
+}
+
+/* Text */
+h2{
+    font-size:45px;
+    margin-top:20px;
+}
+
+/* Button */
+button{
+    margin-top:20px;
+    padding:14px 30px;
+    font-size:18px;
+    border:none;
+    border-radius:40px;
+    background:#e50914;
+    color:white;
+    cursor:pointer;
+    box-shadow:0 0 30px #e50914;
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.1);
+}
+
+</style>
+</head>
+<body>
+
+<!-- Cinematic Intro -->
+<div class="intro">
+    <!-- Change name if you want -->
+    <h1>FOR YOU MY SPECIAL</h1>
+</div>
+
+<!-- Main Birthday Content -->
+<div class="main">
+
+    <!-- Add her image -->
+    <img src="klary.jpeg" alt="Birthday">
+
+    <h2>🎉Happy Birthday🎉 to Klary Tokbipi🥰</h2>
+    <h3>"You makes my heart race every time I see you🤭 and light up my life with your presence".</h3> 
+    <h4>"I feel so lucky to know you. May this year be your best one yet!" 0.4.3</h4>
+    <p>"If birthdays grant wishes, mine already came true—getting to know you once again Happy Birthday!🥰" 0.4.3</p>
+    <p>May your day be filled with laughter, happiness and unforgettable memories.Keep shining and smiling always!😊</p>
+
+    <button onclick="alert('Wishing you a fantastic day filled with happiness! 🎂')">
+        Play Message ▶
+    </button>
+
+</div>
+
+</body>
+</html>
